@@ -1,3 +1,5 @@
+#(4)
+
 import os
 import sys
 import logging
@@ -19,4 +21,5 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger("mlProjectLogger")
+logger = logging.getLogger("cnnClassifierLogger")
+

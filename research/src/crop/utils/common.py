@@ -1,3 +1,5 @@
+#(6)
+
 import os
 from box.exceptions import BoxValueError
 import yaml
@@ -8,6 +10,7 @@ from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
+import base64
 
 
 
@@ -110,8 +113,6 @@ def load_bin(path: Path) -> Any:
     logger.info(f"binary file loaded from: {path}")
     return data
 
-
-
 @ensure_annotations
 def get_size(path: Path) -> str:
     """get size in KB
@@ -126,5 +127,14 @@ def get_size(path: Path) -> str:
     return f"~ {size_in_kb} KB"
 
 
+def decodeImage(imgstring, fileName):
+    imgdata = base64.b64decode(imgstring)
+    with open(fileName, 'wb') as f:
+        f.write(imgdata)
+        f.close()
 
+
+def encodeImageIntoBase64(croppedImagePath):
+    with open(croppedImagePath, "rb") as f:
+        return base64.b64encode(f.read())
 

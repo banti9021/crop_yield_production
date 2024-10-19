@@ -1,0 +1,4 @@
+decision_tree_regressor:
+ 
+  criterion: 'mse'      # The function to measure the quality of a split ('mse' for Mean Squared Error)
+  random_state: 0     # Controls the randomness of the estimator

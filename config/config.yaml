@@ -1,0 +1,15 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://github.com/banti9021/branching/raw/refs/heads/main/yield_df%20(2).zip  
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+
+
+
+data_validation:
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/yield_df.csv
+  STATUS_FILE: artifacts/data_validation/status.txt
