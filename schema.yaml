@@ -1,7 +1,7 @@
 COLUMNS:
 
 
-
+ Area      :  object 
 Area                 :  object 
 Item                : object 
 Year              : int64  
